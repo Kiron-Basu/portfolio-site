@@ -1,0 +1,12 @@
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: $color-white;
+    font-size: 4rem;
+    font-weight: 100;
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+}
+
+.orange {
+    color: orange;
+} 

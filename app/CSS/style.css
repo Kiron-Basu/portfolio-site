@@ -1,0 +1,24 @@
+@import "normalize.css";
+
+@import "abstracts/_variables"; /* needs to be imported first! */
+
+@import "base/_base"; 
+@import "base/_animations"; /*imports have _ and includes don't I guess */
+@import "base/_typography";
+@import "base/_utilities";
+
+@import "layout/_main-title";
+
+@import "components/_btn";
+
+
+
+body {
+    background-image: url("/img/night-sky.jpg");
+    background-size: cover;
+
+    
+}
+
+
+

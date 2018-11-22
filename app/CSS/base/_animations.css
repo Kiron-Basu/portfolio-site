@@ -1,0 +1,52 @@
+/* set the default degree */
+:root {
+    --trajectory-angle: 45deg; 
+    --side: 0px;
+    --translate: 1000px;
+  }
+
+@keyframes particleAnimationLeft
+{
+    from {
+      top: 0px;
+        left: var(--side);
+    }
+    5% {
+        transform: translateY(var(--translate)); /* need to make a variable for this */
+        left: calc( 100% + 100px);
+    }
+
+    100% {
+        transform: translateY(var(--translate));
+        left: calc( 100% + 100px ); /*adds a delay after each loop as animation completed after 10% (10% of 10s = 1s i.e. animation duration) */
+    }
+}
+
+.p{
+    animation-delay:3s;
+    -webkit-animation-delay: 3s;
+    transform: rotate(var(--trajectory-angle)); /* can always revert back to 45deg as necessary: var(--trajectory-angle) // Change to -45*/
+  position:fixed;
+  left:0px; /* change to a lot for right */
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;
+  position:fixed;
+  animation-name: particleAnimationLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.p::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px; /* change to a lot for right? */
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%); 
+}
+.p-1{
+  animation-duration:5s;
+}
