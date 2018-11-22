@@ -456,6 +456,7 @@ h1, h2 {
     font-weight: 100;
     margin-top: .1rem;
     margin-bottom: .1rem;
+    letter-spacing: .5px;
 }
 
 .orange {
@@ -566,10 +567,11 @@ nav {
       }
 
 body {
-    background-image: url("/img/night-sky.jpg");
+    background: url(/img/night-sky.jpg) top no-repeat;
     background-size: cover;
-
-    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 

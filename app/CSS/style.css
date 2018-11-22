@@ -15,10 +15,11 @@
 
 
 body {
-    background-image: url("/img/night-sky.jpg");
+    background: url(/img/night-sky.jpg) top no-repeat;
     background-size: cover;
-
-    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 
