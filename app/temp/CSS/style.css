@@ -452,7 +452,7 @@ html {
 h1, h2 {
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 100;
     margin-top: .1rem;
     margin-bottom: .1rem;
@@ -474,6 +474,33 @@ h1, h2 {
             transform: translate(-50%, -50%);
     //text-align: center;
 }
+
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(245,190,63, 0.3);
+    min-height: 6vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 23%;
+    list-style: none;
+    margin-left: 1rem;
+    
+}
+
+.nav-links a{
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 200;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
 
 .primary-btn,
     .primary-btn:link,

@@ -1,0 +1,26 @@
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba($nav, 0.3);
+    min-height: 6vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 23%;
+    list-style: none;
+    margin-left: 1rem;
+
+    & a{
+        color: $color-white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 200;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    
+}
