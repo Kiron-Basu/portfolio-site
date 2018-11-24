@@ -1,26 +1,81 @@
-nav {
+.nav {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba($nav, 0.3);
+    background-color: rgba($nav, 0.1);
     min-height: 6vh;
+    //visibility: hidden;
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 23%;
+        list-style: none;
+        margin-left: 1rem;
+    
+        & a{
+            color: $color-white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-weight: 200;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+    }
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 23%;
-    list-style: none;
-    margin-left: 1rem;
+.nav-burger {
+    &__checkbox {
 
-    & a{
-        color: $color-white;
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-weight: 200;
-        font-size: 1.8rem;
-        text-transform: uppercase;
     }
+
+    &__btn {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+
+    }
+
+    &__background-btn {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($nav-burger-light, $nav-burger-dark);
+        z-index: 1000;
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+
+    }
+
+    &__list {
+        @mixin centerXY
     
+        
+
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+
+
+    }
 }

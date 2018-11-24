@@ -476,31 +476,84 @@ h1, h2 {
     //text-align: center;
 }
 
-nav {
+.nav {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(245,190,63, 0.3);
+    background-color: rgba(245,190,63, 0.1);
     min-height: 6vh;
+    //visibility: hidden;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 23%;
-    list-style: none;
-    margin-left: 1rem;
-    
-}
+.nav__links {
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 23%;
+        list-style: none;
+        margin-left: 1rem;
+    }
 
-.nav-links a{
-        color: #fff;
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-weight: 200;
-        font-size: 1.8rem;
-        text-transform: uppercase;
+.nav__links a{
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-weight: 200;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+.nav-burger__checkbox {
+
+    }
+
+.nav-burger__btn {
+        background-color: #fff;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+
+    }
+
+.nav-burger__background-btn {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient(#0000FF, #00008B);
+        z-index: 1000;
+    }
+
+.nav-burger__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+
+    }
+
+.nav-burger__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%)}
+
+.nav-burger__item {
+
+    }
+
+.nav-burger__link {
+
+
     }
 
 .primary-btn,

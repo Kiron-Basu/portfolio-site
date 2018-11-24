@@ -10,14 +10,33 @@
     <title>Kiron Basu</title>
 </head>
 <body>
-    <nav>
-        <ul class = "nav-links">
+    <div class = "nav">
+        <ul class = "nav__links">
             <li><a href="#">home</a></li>
             <li><a href="#">portfolio</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
         </ul>
-    </nav>
+    </div>
+    <div class="nav-burger">
+        <input type="checkbox" class="nav-burger__checkbox" id="nav-toggle">
+
+        <label for="nav-toggle" class="nav-burger__btn">MENU</label>
+
+        <div class="nav-burger__background-btn">&nbsp;</div>
+
+        <nav class="nav-burger__nav">
+            <ul class="nav-burger__list">
+                <li class="nav-burger__item">
+                    <a href="" class="nav-burger__link">home</a>
+                    <a href="" class="nav-burger__link">portfolio</a>
+                    <a href="" class="nav-burger__link">about</a>
+                    <a href="" class="nav-burger__link">contact</a>
+                </li> 
+            </ul>
+        </nav>
+
+    </div>
     <div class="shooting-star-container">
             <div class="p p-1"></div>
     </div>
@@ -28,9 +47,8 @@
                 <div class="button-center">
                     <a href='#'class="primary-btn primary-btn--animated">view my work <span class = "primary-btn__arrow-container">
                         <span class ="primary-btn__arrow"></span>
-
                     </span></a>
-                </div>
+            </div>
         </div>
     </div>    
         

@@ -1,5 +1,6 @@
 @import "normalize.css";
 
+@import "abstracts/_mixins";
 @import "abstracts/_variables"; /* needs to be imported first! */
 
 @import "base/_base"; 
