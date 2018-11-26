@@ -492,6 +492,7 @@ h1, h2 {
         flex-basis: 23%;
         list-style: none;
         margin-left: 1rem;
+        
     }
 
 .nav__links a{
@@ -526,8 +527,10 @@ h1, h2 {
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient(#0000FF, #00008B);
+        background-image: radial-gradient(#0000FF, #000);
         z-index: 1000;
+        -webkit-transform: scale(80);
+                transform: scale(80);
     }
 
 .nav-burger__nav {
@@ -535,7 +538,7 @@ h1, h2 {
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
 
     }
@@ -545,15 +548,44 @@ h1, h2 {
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%)}
-
-.nav-burger__item {
-
+                transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;            
     }
 
-.nav-burger__link {
+.nav-burger__item {
+        margin: 2rem;  
+    }
 
+.nav-burger__link:link,
+        .nav-burger__link:visited {
+            position: relative; //allows underline to start and finish relative to text width
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            text-decoration: none;
+            color: #f7f7f7;
+            text-transform: uppercase;  
+        }
 
+.nav-burger__link span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+
+.nav-burger__underline::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+
+.nav-burger__underline:hover::after {
+        width: 100%;
     }
 
 .primary-btn,
