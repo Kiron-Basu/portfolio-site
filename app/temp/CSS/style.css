@@ -476,6 +476,28 @@ h1, h2 {
     //text-align: center;
 }
 
+.nav-content {
+    display: none;
+}
+
+@media (min-width: 800px) {
+
+.nav-content {
+        display: block
+}
+    }
+
+.burger-content {
+    display: block;
+}
+
+@media (min-width: 800px) {
+
+.burger-content {
+        display: none
+}
+    }
+
 .nav {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -491,8 +513,7 @@ h1, h2 {
         justify-content: space-around;
         flex-basis: 23%;
         list-style: none;
-        margin-left: 1rem;
-        
+        margin-left: 1rem;  
     }
 
 .nav__links a{
@@ -505,7 +526,7 @@ h1, h2 {
         }
 
 .nav-burger__checkbox {
-
+        display: none;
     }
 
 .nav-burger__btn {
@@ -517,10 +538,13 @@ h1, h2 {
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
+        text-align: center;
+        cursor: pointer;
 
     }
 
 .nav-burger__background-btn {
+        
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
@@ -529,17 +553,21 @@ h1, h2 {
         right: 6.5rem;
         background-image: radial-gradient(#0000FF, #000);
         z-index: 1000;
-        -webkit-transform: scale(80);
-                transform: scale(80);
+        box-shadow: 0 2rem 3rem rgba(0,0,0, .4);
+        transition: -webkit-transform .5s;
+        transition: transform .5s;
+        transition: transform .5s, -webkit-transform .5s;
     }
 
 .nav-burger__nav {
         height: 100vh;
-        width: 100%;
+        width: 0;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 1500;
+        opacity: 0;
+        transition: all .4s;
 
     }
 
@@ -561,17 +589,14 @@ h1, h2 {
         .nav-burger__link:visited {
             position: relative; //allows underline to start and finish relative to text width
             display: inline-block;
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: 300;
             text-decoration: none;
             color: #f7f7f7;
             text-transform: uppercase;  
         }
 
-.nav-burger__link span {
-            margin-right: 1.5rem;
-            display: inline-block;
-        }
+/* button animation */
 
 .nav-burger__underline::after {
         content: '';
@@ -584,9 +609,73 @@ h1, h2 {
         transition: width .3s;
     }
 
+/* links animation */
+
 .nav-burger__underline:hover::after {
         width: 100%;
     }
+
+.nav-burger__checkbox:checked ~ .nav-burger__background-btn {
+        -webkit-transform: scale(80);
+                transform: scale(80);
+    }
+
+.nav-burger__checkbox:checked ~ .nav-burger__nav {
+        width: 100%;
+        opacity: 1;
+    }
+
+/* button bugers */
+
+.nav-burger__icon {
+            position: relative;
+            margin-top: 3.5rem;
+        }
+
+.nav-burger__icon,
+            .nav-burger__icon::before,
+            .nav-burger__icon::after {
+            width: 3rem;
+            height: 2px;
+            background-color: #303030;
+            display: inline-block;
+            }
+
+.nav-burger__icon::before,
+            .nav-burger__icon::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+.nav-burger__icon::before {top: -.8rem;}
+
+.nav-burger__icon::after {top: .8rem;}
+
+.nav-burger__btn:hover .nav-burger__icon::before {
+            top: -1rem;
+        }
+
+.nav-burger__btn:hover .nav-burger__icon::after {
+            top: 1rem;
+        }
+
+.nav-burger__checkbox:checked + .nav-burger__btn .nav-burger__icon {
+        background-color: transparent;
+    }
+
+.nav-burger__checkbox:checked + .nav-burger__btn .nav-burger__icon::after {
+            top: 0;
+            -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+        }
+
+.nav-burger__checkbox:checked + .nav-burger__btn .nav-burger__icon::before {
+            top: 0;
+            -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+        }
 
 .primary-btn,
     .primary-btn:link,
