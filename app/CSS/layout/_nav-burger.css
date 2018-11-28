@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+.burger-content {
+    display: block;
+    @mixin mediumScreen {
+        display: none;
+    }
+}
+.nav-burger {
+    
+    &__checkbox {
+        display: none;
+    }
+
+    &__btn {
+        background-color: $color-white;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 2.5rem;
+        right: 2.5rem;
+        border-radius: 50%;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    &__background-btn {
+        
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        background-image: radial-gradient(circle at top, $nav-burger-dark 30%, $color-black 70%);
+        z-index: 1000;
+        box-shadow: 0 2rem 3rem rgba($color-black, .4);
+        transition: transform .5s;
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        opacity: 0;
+        transition: all .4s;
+
+    }
+
+    &__list {
+        @mixin centerXY;
+        list-style: none;
+        text-align: center;            
+    }
+
+    &__item {
+        margin: 2rem;  
+    }
+
+
+    &__link {
+        &:link,
+        &:visited {
+            position: relative; //allows underline to start and finish relative to text width
+            display: inline-block;
+            font-size: 4rem;
+            font-weight: 100;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: $color-grey-light-1;
+            text-transform: uppercase;  
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+   /* button animation */
+    &__underline::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color-white;
+        transition: width .3s;
+    }
+      
+    &__underline:hover::after {
+        width: 100%;
+    }
+     /* links animation */
+    &__checkbox:checked ~ &__background-btn {
+        transform: scale(80);
+    } 
+
+    &__checkbox:checked ~ &__nav {
+        width: 100%;
+        opacity: 1;
+    } 
+
+       /* button bugers */
+        &__icon {
+            position: relative;
+            margin-top: 3rem;
+            
+            &,
+            &::before,
+            &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark;
+            display: inline-block;
+            }
+        
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+            &::before {top: -.8rem;}
+            &::after {top: .8rem;}
+        }
+        
+    &__btn:hover &__icon::before {
+            top: -1rem;
+        }
+    &__btn:hover &__icon::after {
+            top: 1rem;
+        }
+
+    &__checkbox:checked + &__btn &__icon {
+        background-color: transparent;
+
+        &::after {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}   

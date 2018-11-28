@@ -11,7 +11,7 @@
     }
   }
   @define-mixin mediumScreen {
-    @media (min-width: 800px) {
+    @media (min-width: 768px) {
       @mixin-content;
     }
   }
@@ -20,3 +20,10 @@
       @mixin-content;
     }
   }
+
+  @define-mixin extraLargeScreen {
+    @media (min-width: 1600px) {
+      @mixin-content;
+      }
+    }
+  

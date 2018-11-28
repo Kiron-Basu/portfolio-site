@@ -3,5 +3,15 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    //text-align: center;
+    text-align: center;
+    padding: 2rem;
+    width: 90%;
+
+    @mixin mediumScreen {
+        
+    }
+
+    @mixin largeScreen {
+       
+    }
 }

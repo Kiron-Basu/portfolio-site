@@ -1,15 +1,7 @@
-
 .nav-content {
     display: none;
     @mixin mediumScreen {
         display: block;
-    }
-}
-
-.burger-content {
-    display: block;
-    @mixin mediumScreen {
-        display: none;
     }
 }
 
@@ -25,9 +17,17 @@
     &__links {
         display: flex;
         justify-content: space-around;
-        flex-basis: 23%;
+        flex-basis: 50%;
         list-style: none;
         margin-left: 1rem;
+
+        @mixin largeScreen {
+            flex-basis: 35%;
+        }
+
+        @mixin extraLargeScreen {
+            flex-basis: 23%;
+        }
     
         & a{
             color: $color-white;
@@ -36,148 +36,37 @@
             font-weight: 200;
             font-size: 1.8rem;
             text-transform: uppercase;
-        }  
+            padding-bottom: 7px;
+            position: relative;
+          
+             &:before,
+              &:after {
+                  content: '';
+                  position: absolute;
+                  bottom: 2px;
+                  left: 0; right: 0;
+                  height: 2px;
+                  background-color: orange;
+              }
+              &:before {
+                  opacity: 0;
+                  transform: translateY(-8px);
+                  transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
+              }
+              &:after {
+                  opacity: 0;
+                  transform: translateY(8px/2);
+                  transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+              }
+              &:hover,
+              &:focus {
+                  &:before,
+                  &:after {
+                      opacity: 1;
+                      transform: translateY(0);
+                  }
+                  
+              }
+          }
     }
 }
-
-.nav-burger {
-    
-    &__checkbox {
-        display: none;
-    }
-
-    &__btn {
-        background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
-        position: fixed;
-        top: 6rem;
-        right: 6rem;
-        border-radius: 50%;
-        z-index: 2000;
-        text-align: center;
-        cursor: pointer;
-
-    }
-
-    &__background-btn {
-        
-        height: 6rem;
-        width: 6rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
-        background-image: radial-gradient($nav-burger-light, $color-black);
-        z-index: 1000;
-        box-shadow: 0 2rem 3rem rgba($color-black, .4);
-        transition: transform .5s;
-    }
-
-    &__nav {
-        height: 100vh;
-        width: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 1500;
-        opacity: 0;
-        transition: all .4s;
-
-    }
-
-    &__list {
-        @mixin centerXY;
-        list-style: none;
-        text-align: center;            
-    }
-
-    &__item {
-        margin: 2rem;  
-    }
-
-
-    &__link {
-        &:link,
-        &:visited {
-            position: relative; //allows underline to start and finish relative to text width
-            display: inline-block;
-            font-size: 4rem;
-            font-weight: 300;
-            text-decoration: none;
-            color: $color-grey-light-1;
-            text-transform: uppercase;  
-        }
-    }
-   /* button animation */
-    &__underline::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        display: block;
-        width: 0;
-        height: 2px;
-        background: $color-white;
-        transition: width .3s;
-    }
-       /* links animation */
-    &__underline:hover::after {
-        width: 100%;
-    }
-    
-    &__checkbox:checked ~ &__background-btn {
-        transform: scale(80);
-    } 
-
-    &__checkbox:checked ~ &__nav {
-        width: 100%;
-        opacity: 1;
-    } 
-
-       /* button bugers */
-        &__icon {
-            position: relative;
-            margin-top: 3.5rem;
-            
-            &,
-            &::before,
-            &::after {
-            width: 3rem;
-            height: 2px;
-            background-color: $color-grey-dark;
-            display: inline-block;
-            }
-        
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                transition: all .2s;
-            }
-
-            &::before {top: -.8rem;}
-            &::after {top: .8rem;}
-        }
-        
-    &__btn:hover &__icon::before {
-            top: -1rem;
-        }
-    &__btn:hover &__icon::after {
-            top: 1rem;
-        }
-
-    &__checkbox:checked + &__btn &__icon {
-        background-color: transparent;
-
-        &::after {
-            top: 0;
-            transform: rotate(135deg);
-        }
-
-        &::before {
-            top: 0;
-            transform: rotate(-135deg);
-        }
-    }
-}   
