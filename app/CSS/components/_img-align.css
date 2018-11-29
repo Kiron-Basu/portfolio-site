@@ -1,0 +1,8 @@
+.img-align {
+    text-align: center;
+
+    & img {
+        transform: translateY();
+    }
+}
+

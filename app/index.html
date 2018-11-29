@@ -10,55 +10,84 @@
     <title>Kiron Basu</title>
 </head>
 <body>
-    <div class="nav-content">
-        <div class = "nav">
-            <ul class = "nav__links">
-                <li><a href="#">home</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-    </div>
    <div class="burger-content">
-    <div class="nav-burger">
-        <input type="checkbox" class="nav-burger__checkbox" id="nav-toggle">
+        <div class="nav-burger">
+            <input type="checkbox" class="nav-burger__checkbox" id="nav-toggle">
 
-        <label for="nav-toggle" class="nav-burger__btn">
+            <label for="nav-toggle" class="nav-burger__btn">
             <span class="nav-burger__icon">&nbsp;</span>
-        </label>
+            </label>
+            <div class="nav-burger__background-btn">&nbsp;</div>
 
-        <div class="nav-burger__background-btn">&nbsp;</div>
-
-        <nav class="nav-burger__nav">
-            <ul class="nav-burger__list">
+            <nav class="nav-burger__nav">
+                <ul class="nav-burger__list">
                     <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">home</a></li>
                     <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">portfolio</a></li>
                     <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">about</a></li>
                     <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">contact</a></li>
-            </ul>
-        </nav>
-    </div>
-   </div>
-    <div class="shooting-star-container">
-            <div class="p p-1"></div>
-    </div>
-    
-    <div class="wrapper">
-        <div class="title-container main-title">
-            <h1 class = "primary-heading">Hello, I'm <span class = "orange">Kiron</span>.</h1>
-            <h2>I'm a full-stack web developer.</h2>
-                <div class="button-center">
-                    <a href='#'class="primary-btn primary-btn--animated">view my work <span class = "primary-btn__arrow-container">
-                        <span class ="primary-btn__arrow"></span>
-                    </span></a>
-            </div>
+                </ul>
+            </nav>
         </div>
-    </div>    
-        
-    
-        
-    
+    </div>
+   <header>
+    <div class="wrapper">
+            <div class="nav-content">
+                    <div class = "nav">
+                        <ul class = "nav__links">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">portfolio</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+    <div class="title-container main-title">
+        <h1 class = "primary-heading">Hello, I'm <span class = "orange">Kiron</span>.</h1>
+        <h2>I'm a full-stack web developer.</h2>
+        <div class="button-center">
+        <a href='#'class="primary-btn primary-btn--animated">view my work <span class = "primary-btn__arrow-container">
+        <span class ="primary-btn__arrow"></span>
+        </span></a>
+        </div>
+    </div>
+    <div class="shooting-star-container">
+        <div class="p p-1"></div>
+    </div> 
+    </div>  
+   </header>
+   
+   <main>
+        <section class="section-portfolio">
+            <div class = "text-box-wrapper">
+                <div class = "box img-align">
+                    <h3>Box 1</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+                <div class = "box img-align">
+                    <h3>Box 2</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+                <div class = "box img-align">
+                    <h3>Box 3</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+            </div>
+            <div class = "text-box-wrapper">
+                <div class = "box img-align">
+                    <h3>Box 4</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+                <div class = "box img-align">
+                    <h3>Box 5</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+                <div class = "box img-align">
+                    <h3>Box 6</h3>
+                    <img src ="/img/nat-1.jpg">
+                </div>
+            </div>
+        </section>
+    </main>        
 </body>
 <script src="scripts/app.js"></script>
 </html>
