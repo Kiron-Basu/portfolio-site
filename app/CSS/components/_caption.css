@@ -1,0 +1,19 @@
+.caption {
+    z-index: 2;
+    position: absolute;
+    width: calc(100% - 2rem);
+    bottom: -1rem;
+    left: 0;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: $color-white;
+    background-color: $color-grey-dark-2;
+}
+
+.card {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .1s;
+    transition: opacity .1s;
+    
+}

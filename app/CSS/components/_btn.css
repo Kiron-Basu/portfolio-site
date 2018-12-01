@@ -60,4 +60,23 @@
       }
 }
 
+.portfolio-btns{
+    position: absolute;
+    z-index: 30;
+    top: 8%;
+    left: 2%;;
+    & a {
+        font-family: 'roboto', 'san-serif';
+        text-decoration: none;
+        font-size: 1rem;
+        color: $color-white;
+        margin-right: 1.5rem;
+    }   
+}
+.portfolio-btn {
+    background-color:#49224a;
+    padding: .6rem 1.5rem;
+    border-radius: 4px
+}
+
 

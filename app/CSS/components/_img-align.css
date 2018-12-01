@@ -1,8 +1,16 @@
 .img-align {
     text-align: center;
+    
 
     & img {
-        transform: translateY();
+        max-width: 100%; /*prevents overspill when transitioning between medimum and small screens*/
+        margin: 0;
+        border-radius: 3px;
+
     }
+}
+
+.img-container {
+    position: relative;
 }
 

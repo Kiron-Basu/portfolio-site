@@ -6,12 +6,6 @@
     text-align: center;
     padding: 2rem;
     width: 90%;
+    backface-visibility: hidden;
 
-    @mixin mediumScreen {
-        
-    }
-
-    @mixin largeScreen {
-       
-    }
 }

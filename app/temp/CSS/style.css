@@ -294,8 +294,23 @@ select { /* 1 */
     color: orange;
 }.button-center {
     text-align: center;
+}.section-heading {
+    text-align: center;
+    margin-bottom: 7rem;
+    font-size: 6rem;
+    font-weight: 100;
+}.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.65);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: .45s ease-in-out;
 }.wrapper {
-    height: 95vh;
+    height: 100vh;
     
     background: url(/img/night-sky.jpg) top no-repeat;
     background-size: cover;
@@ -311,9 +326,10 @@ select { /* 1 */
     text-align: center;
     padding: 2rem;
     width: 90%;
-}@media (min-width: 768px) {
-    }@media (min-width: 1200px) {
-    }.nav-content {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+}.nav-content {
     display: none;
 }@media (min-width: 768px) {.nav-content {
         display: block
@@ -384,12 +400,12 @@ select { /* 1 */
     }.nav-burger__checkbox {
         display: none;
     }.nav-burger__btn {
-        background-color: #fff;
+        background-color: #eee;
         height: 6rem;
         width: 6rem;
         position: fixed;
-        top: 2.5rem;
-        right: 2.5rem;
+        top: 1.5rem;
+        right: 1rem;
         border-radius: 50%;
         z-index: 2000;
         text-align: center;
@@ -401,8 +417,8 @@ select { /* 1 */
         width: 5rem;
         border-radius: 50%;
         position: fixed;
-        top: 3rem;
-        right: 3rem;
+        top: 2rem;
+        right: 1.5rem;
         background-image: radial-gradient(circle at top, #00008B 30%, #000 70%);
         z-index: 1000;
         box-shadow: 0 2rem 3rem rgba(0,0,0, .4);
@@ -488,25 +504,47 @@ select { /* 1 */
             -webkit-transform: rotate(-135deg);
                     transform: rotate(-135deg);
         }.section-portfolio {
+    padding: 13rem 0;
     background-color: #eee;
-}.section-portfolio h3 {
+}.section-portfolio h4 {
        margin-bottom: 1rem;
    }.text-box-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 3rem;
+    padding-bottom: 5rem;
+    flex-wrap: wrap;
+  
+}.text-box-wrapper:hover .box:not(:hover) {
+    -webkit-transform: scale(.98);
+            transform: scale(.98);
   }.box {
-    padding: 20px;
-    margin-bottom: 20px;
+    flex-grow: 1;
+    position: relative;
+    padding: 1rem;
+    margin: 3rem 2rem;
     /*flex: 1;*/
-    box-sizing: border-box;
-    flex-basis: 30%;
-  }.box:nth-child(1) {background-color: pink;}.box:nth-child(2) {background-color: orange;}.box:nth-child(3) {background-color: orangered;}@media (min-width: 900px) {
+   flex-basis: 29%;
+   box-shadow: 0 1.5rem 3rem rgba(0,0,0, 0.4);
+   border-radius: 3px;
+   transition: all .3s;
+  outline-offset: 1.5rem;
+  }.box:hover .overlay {
+    opacity: 1;
+  }.box:hover .card {
+   visibility: visible;
+   opacity: 1;
+  }@media (min-width: 1600px) {
+    .box:hover {
+      outline: 1rem solid orange;
+      -webkit-transform: scale(1.02) translateY(-1.5rem);
+              transform: scale(1.02) translateY(-1.5rem);
+    }
+      }.box:nth-child(1) {background-color: pink;}.box:nth-child(2) {background-color: orange;}.box:nth-child(3) {background-color: orangered;}@media (min-width: 768px) {
     .text-box-wrapper {
       display: flex;
       justify-content: space-between;
     }
-  }.primary-btn,
+    }.primary-btn,
     .primary-btn:link,
     .primary-btn:visited {
         font-family: 'Roboto', sans-serif;
@@ -557,12 +595,46 @@ select { /* 1 */
         background-color: #fff;
         -webkit-transform: rotate(45deg) translate(-4.9px,7.4px);
                 transform: rotate(45deg) translate(-4.9px,7.4px);
-      }.img-align {
+      }.portfolio-btns{
+    position: absolute;
+    z-index: 30;
+    top: 8%;
+    left: 2%;   
+}.portfolio-btns a {
+        font-family: 'roboto', 'san-serif';
+        text-decoration: none;
+        font-size: 1rem;
+        color: #fff;
+        margin-right: 1.5rem;
+    }.portfolio-btn {
+    background-color:#49224a;
+    padding: .6rem 1.5rem;
+    border-radius: 4px
+}.img-align {
     text-align: center;
 }.img-align img {
-        -webkit-transform: translateY();
-                transform: translateY();
-    }body {
+        max-width: 100%; /*prevents overspill when transitioning between medimum and small screens*/
+        margin: 0;
+        border-radius: 3px;
+
+    }.img-container {
+    position: relative;
+}.caption {
+    z-index: 2;
+    position: absolute;
+    width: calc(100% - 2rem);
+    bottom: -1rem;
+    left: 0;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #fff;
+    background-color: #999;
+}.card {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .1s;
+    
+}body {
     
 }
 

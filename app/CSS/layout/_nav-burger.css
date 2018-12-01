@@ -12,12 +12,12 @@
     }
 
     &__btn {
-        background-color: $color-white;
+        background-color: $color-grey-light-2;
         height: 6rem;
         width: 6rem;
         position: fixed;
-        top: 2.5rem;
-        right: 2.5rem;
+        top: 1.5rem;
+        right: 1rem;
         border-radius: 50%;
         z-index: 2000;
         text-align: center;
@@ -31,8 +31,8 @@
         width: 5rem;
         border-radius: 50%;
         position: fixed;
-        top: 3rem;
-        right: 3rem;
+        top: 2rem;
+        right: 1.5rem;
         background-image: radial-gradient(circle at top, $nav-burger-dark 30%, $color-black 70%);
         z-index: 1000;
         box-shadow: 0 2rem 3rem rgba($color-black, .4);
