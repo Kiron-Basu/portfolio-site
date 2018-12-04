@@ -13,12 +13,14 @@
         height: 100%;
         opacity: 0;
         z-index: 1;
-        -webkit-transition: .45s ease-in-out;
-        transition: .45s ease-in-out;
+        -webkit-transition: .35s ease-in-out;
+        transition: .35s ease-in-out;
     }
 
     &__caption {
         z-index: 2;
+        font-family: 'roboto', 'sans-serif';
+        font-weight: 100;
         position: absolute;
         width: calc(100% - 1rem);
         bottom: -1rem;
@@ -26,6 +28,7 @@
         font-size: 2rem;
         padding: .5rem;
         color: $color-white;
+        border-radius: 3px;
         background-color: $color-grey-dark-2;
     }
 }

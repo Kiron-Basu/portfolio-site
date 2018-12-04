@@ -1,0 +1,40 @@
+/* Do not edit modules/_sprite directly as it's generated automatically bu Gulp. Instead edit gulp/templates/sprite */
+
+        .icon {
+            background-image: url('/img/sprites/sprite-9810982c.svg');
+        }
+    .icon--codepen-svg {
+        width: 500px;
+        height: 500px;
+        background-position: 0 0;
+    }
+    .icon--css-icon {
+        width: 73px;
+        height: 81px;
+        background-position: 100% 76.12887828162292%;
+    }
+    .icon--html-icon {
+        width: 103px;
+        height: 103px;
+        background-position: 90.41591320072332% 54.40302267002519%;
+    }
+    .icon--javascript-icon {
+        width: 106px;
+        height: 106px;
+        background-position: 90.9090909090909% 27.913705583756347%;
+    }
+    .icon--react-icon {
+        width: 156px;
+        height: 109.98px;
+        background-position: 100% 0;
+    }
+    .icon--redux-icon {
+        width: 83px;
+        height: 83px;
+        background-position: 87.26003490401396% 76.49400479616307%;
+    }
+    .icon--sass-icon {
+        width: 76px;
+        height: 76px;
+        background-position: 86.20689655172414% 94.80660377358491%;
+    }

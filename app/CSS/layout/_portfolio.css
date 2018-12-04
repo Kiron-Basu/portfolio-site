@@ -28,6 +28,7 @@
    border-radius: 3px;
    transition: all .3s;
   outline-offset: 1.5rem;
+  
 
   &:hover .card__overlay {
     opacity: 1;
@@ -46,9 +47,7 @@
    }
   }
   
-  .box:nth-child(1) {background-color: pink;}
-  .box:nth-child(2) {background-color: orange;}
-  .box:nth-child(3) {background-color: orangered;}
+
   
   @mixin mediumScreen {
     .text-box-wrapper {

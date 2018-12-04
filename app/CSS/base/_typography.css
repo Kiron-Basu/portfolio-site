@@ -1,4 +1,6 @@
-
+.underline {
+    text-decoration: underline;
+}
 
 h1, h2 {
     font-family: 'Roboto', sans-serif;
@@ -19,6 +21,40 @@ h1, h2 {
     }
 }
 
+h4 {
+    font-family: 'roboto', 'sans-serif';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .orange {
     color: orange;
 } 
+
+.about-text, .cv-text, .email-text, .tools-text {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.section-about__text-content p:not(.email-text){
+    font-size: 2rem;
+    
+
+    @mixin mediumScreen {
+        font-size: 3.5rem;
+    }
+    @mixin largeScreen {
+        font-size: 4.5rem;
+    }
+}   
+
+.email-text {
+    font-size: 2rem;
+}
+
+.section-about__text-content p:not(.intro){
+    margin-bottom: 4rem;
+}   
+
+
+

@@ -1,0 +1,40 @@
+.section-about {
+     padding: 13rem 0;
+     &__text-content {
+        padding: 0 2rem; 
+        margin: 0 auto;
+         max-width: 1370px;
+
+         @mixin mediumScreen {
+            padding: 0 1.5rem;
+        }
+     }
+    
+     &__icon-container {
+        transform: translateX(-1.5rem);
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+
+        @mixin mediumScreen {
+            padding: 0;
+        }
+     }
+}
+
+
+.icon-shift-up {
+    transform: translateY(-1rem);
+}
+.icon-shift-left {
+    transform: translateX(-3.5rem);
+}
+.icon-redux-position {
+    transform: translate(-6.5rem, -1rem);
+}
+.icon-sass-position {
+    transform: translate(-5.5rem, -1rem);
+}
+
+
+

@@ -7,12 +7,15 @@
 @import "base/_animations"; /*imports have _ and includes don't I guess */
 @import "base/_typography";
 @import "base/_utilities";
+@import "base/_sprite";
 
 @import "layout/_main-hero";
 @import "layout/_main-title";
 @import "layout/_nav";
 @import "layout/_nav-burger";
 @import "layout/_portfolio";
+@import "layout/_about";
+@import "layout/_contact";
 
 @import "components/_btn";
 @import "components/_img-align";
