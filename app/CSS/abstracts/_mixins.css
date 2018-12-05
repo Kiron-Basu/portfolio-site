@@ -5,6 +5,11 @@
     transform: translate(-50%, -50%);
   }
 
+  @define-mixin extraSmallScreen {
+    @media (max-width: 530px) {
+      @mixin-content;
+    }
+  }
   @define-mixin smallScreen {
     @media (min-width: 530px) {
       @mixin-content;

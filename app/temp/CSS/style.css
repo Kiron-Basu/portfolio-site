@@ -309,19 +309,28 @@ select { /* 1 */
     }@media (min-width: 1200px) {.section-about__text-content p:not(.email-text){
         font-size: 4.5rem
 }
+    }@media (max-width: 530px) {.tools-text {   
+        display: none
+}
     }.email-text {
     font-size: 2rem;
 }.section-about__text-content p:not(.intro){
     margin-bottom: 4rem;
-}.button-center {
+}@media (max-width: 530px) {.section-about__text-content {
+        text-align: center
+}
+    }.button-center {
     text-align: center;
 }.section-heading {
+    font-family: 'roboto', 'sans-serif';
     text-align: center;
     margin-bottom: 7rem;
     font-size: 6rem;
     font-weight: 100;
 }.inline-block {
     display: inline-block;
+}.extended-spacing {
+    margin-top: 16rem;
 }/* Do not edit modules/_sprite directly as it's generated automatically bu Gulp. Instead edit gulp/templates/sprite */.icon {
             background-image: url('/img/sprites/sprite-9810982c.svg');
         }.icon--codepen-svg {
@@ -353,14 +362,23 @@ select { /* 1 */
         height: 76px;
         background-position: 86.20689655172414% 94.80660377358491%;
     }.wrapper {
-    height: 100vh;
-    
+    position: relative;
+    z-index: 100;
+    height: 135vh;
     background: url(/img/night-sky.jpg) top no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-}.main-title {
+
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
+}@media (max-width: 530px) {.wrapper {   
+    webkit-clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0% 95%, 0 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0% 95%, 0 0);
+            clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0% 95%, 0 0)
+}
+    }.main-title {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -373,6 +391,7 @@ select { /* 1 */
             backface-visibility: hidden;
 
 }.nav-content {
+    position: relative;
     display: none;
 }@media (min-width: 768px) {.nav-content {
         display: block
@@ -547,7 +566,11 @@ select { /* 1 */
             -webkit-transform: rotate(-135deg);
                     transform: rotate(-135deg);
         }.section-portfolio {
-    padding: 13rem 0;
+  z-index: -2;
+  -webkit-transform: translateY(-20rem);
+          transform: translateY(-20rem);
+  padding-top: 13rem;
+  padding-bottom: 2rem;
     background-color: #eee;
 }.section-portfolio h4 {
        margin-bottom: 1rem;
@@ -588,7 +611,7 @@ select { /* 1 */
       justify-content: space-between;
     }
     }.section-about {
-     padding: 13rem 0;
+    margin-top: -10rem;
 }.section-about__text-content {
         padding: 0 2rem; 
         margin: 0 auto;
@@ -596,18 +619,38 @@ select { /* 1 */
      }@media (min-width: 768px) {.section-about__text-content {
             padding: 0 1.5rem
      }
-    }.section-about__icon-container {
+    }.section-about__icon-containers {
         -webkit-transform: translateX(-1.5rem);
                 transform: translateX(-1.5rem);
         margin-bottom: 2rem;
         padding: 0 1rem;
         text-align: center;
-     }@media (min-width: 768px) {.section-about__icon-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+     }@media (max-width: 530px) {.section-about__icon-containers {   
+            display: none
+     }
+    }@media (min-width: 1200px) {.section-about__icon-containers {   
+            flex-wrap: nowrap
+     }
+    }@media (min-width: 768px) {.section-about__icon-containers {
             padding: 0
      }
-    }.icon-shift-up {
+    }.section-about__icon-container {
+         box-sizing: border-box;
+         flex-basis: 30%;
+
+         
+     }.icon-shift-up {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
+}.icon-shift-down-1 {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+}.icon-shift-down-2 {
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
 }.icon-shift-left {
     -webkit-transform: translateX(-3.5rem);
             transform: translateX(-3.5rem);
@@ -618,9 +661,62 @@ select { /* 1 */
     -webkit-transform: translate(-5.5rem, -1rem);
             transform: translate(-5.5rem, -1rem);
 }.section-contact {
-
-
-}.primary-btn,
+    margin-top: 14rem;
+    padding-top: 15rem;
+    padding-bottom: 20rem;
+    background-image: url('/img/earth-from-space.jpg');
+    background-image: linear-gradient(to bottom, rgba(255,255,255, .6) 0%,rgba(255,255,255, .6) 100%), url('/img/earth-from-space.jpg');
+    background-size: cover;
+    
+}.section-contact__footer {
+        position: relative;
+        
+        bottom: -18rem;
+        text-align: center;
+    }.section-contact__footer h4 {
+            font-family: 'roboto', 'sans-serif';
+            font-weight: 100;
+        }form {
+    max-width: 30rem;
+    margin: 0 auto 5rem;
+    font-family: 'roboto', 'sans-serif';
+    font-size: 2rem;
+    text-transform: uppercase;
+}@media (min-width: 768px) {form {
+        max-width: 60rem;
+        font-size: 2.3rem
+}
+    }form input, form textarea {
+        width: 100%;
+        background: transparent;
+    }form inputinput:hover span, form textareainput:hover span {
+            color: red;
+        }form input:focus, form textarea:focus {
+            outline: none;
+        }form label {
+        display: block;
+        margin: 3rem 0;
+    }form span {
+        display: block;
+        margin-bottom: 1rem;
+    }form textarea {
+        height: 20rem;
+    }.form-control {
+    border: none;
+}.form-control:not(.submit) {border-bottom: 2px solid #000};.submit-wrapper {
+    text-align: left;
+}.submit {
+    background-color: #27D913;
+    color: #fff;  
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 14%;
+    border-radius: 4px;
+    padding: .5rem 0;
+  }.submit:hover {
+        background-color: red;
+    }.primary-btn,
     .primary-btn:link,
     .primary-btn:visited {
         font-family: 'Roboto', sans-serif;

@@ -48,6 +48,12 @@ h4 {
     }
 }   
 
+.tools-text {
+    @mixin extraSmallScreen {   
+        display: none;  
+
+    }
+}
 .email-text {
     font-size: 2rem;
 }
@@ -55,6 +61,12 @@ h4 {
 .section-about__text-content p:not(.intro){
     margin-bottom: 4rem;
 }   
+
+.section-about__text-content {
+    @mixin extraSmallScreen  {
+        text-align: center;
+    }
+}
 
 
 

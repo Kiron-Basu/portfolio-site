@@ -1,5 +1,5 @@
 .section-about {
-     padding: 13rem 0;
+    margin-top: -10rem;
      &__text-content {
         padding: 0 2rem; 
         margin: 0 auto;
@@ -10,21 +10,45 @@
         }
      }
     
-     &__icon-container {
+     &__icon-containers {
         transform: translateX(-1.5rem);
         margin-bottom: 2rem;
         padding: 0 1rem;
         text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+        
+        @mixin extraSmallScreen {   
+            display: none;  
+    
+        }
+        @mixin largeScreen {   
+            flex-wrap: nowrap;   
+        }
 
         @mixin mediumScreen {
             padding: 0;
         }
+     }
+
+     &__icon-container {
+         box-sizing: border-box;
+         flex-basis: 30%;
+
+         
      }
 }
 
 
 .icon-shift-up {
     transform: translateY(-1rem);
+}
+.icon-shift-down-1 {
+    transform: translateY(1rem);
+}
+.icon-shift-down-2 {
+    transform: translateY(2rem);
 }
 .icon-shift-left {
     transform: translateX(-3.5rem);

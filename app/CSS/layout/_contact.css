@@ -1,4 +1,87 @@
 .section-contact {
+    margin-top: 14rem;
+    padding-top: 15rem;
+    padding-bottom: 20rem;
+    background-image: url('/img/earth-from-space.jpg');
+    background-image: linear-gradient(to bottom, rgba($color-white, .6) 0%,rgba($color-white, .6) 100%), url('/img/earth-from-space.jpg');
+    background-size: cover;
 
+    &__footer {
+        position: relative;
+        
+        bottom: -18rem;
+        text-align: center;
 
+        & h4 {
+            font-family: 'roboto', 'sans-serif';
+            font-weight: 100;
+        }
+    }
+    
 }
+
+form {
+    max-width: 30rem;
+
+    @mixin mediumScreen {
+        max-width: 60rem;
+        font-size: 2.3rem;
+    }
+    margin: 0 auto 5rem;
+    font-family: 'roboto', 'sans-serif';
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    & input, textarea {
+        width: 100%;
+        background: transparent;
+
+        &input:hover span {
+            color: red;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    
+    
+    & label {
+        display: block;
+        margin: 3rem 0;
+    }
+    
+    & span {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    & textarea {
+        height: 20rem;
+    }
+}
+
+
+.form-control {
+    border: none;
+    &:not(.submit) {border-bottom: 2px solid $color-black};
+}
+
+.submit-wrapper {
+    text-align: left;
+}
+
+.submit {
+    background-color: #27D913;
+    color: $color-white;  
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 14%;
+    border-radius: 4px;
+    padding: .5rem 0;
+
+    &:hover {
+        background-color: red;
+    }
+  }
