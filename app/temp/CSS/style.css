@@ -390,6 +390,12 @@ select { /* 1 */
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 
+}.nav-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: red;
+
 }.nav-content {
     position: relative;
     display: none;
@@ -715,8 +721,36 @@ select { /* 1 */
     border-radius: 4px;
     padding: .5rem 0;
   }.submit:hover {
-        background-color: red;
-    }.primary-btn,
+        background-color: rgb(93, 250, 93);
+    }.input-container {
+    width: 60rempx;
+    position: relative;
+   }.form-control {
+    border: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+     outline: none;
+   }.border {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #04C2C9;
+   }.form-control:focus ~ .border {
+    width: 100%;
+    transition: 0.5s;
+   }.textarea-border {
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #04C2C9;
+   }.form-control:focus ~ .textarea-border {
+    width: 100%;
+    transition: 0.5s;
+   }.primary-btn,
     .primary-btn:link,
     .primary-btn:visited {
         font-family: 'Roboto', sans-serif;

@@ -31,16 +31,19 @@
     </div>
    <header>
     <div class="wrapper">
+        <div class="nav-wrapper">
             <div class="nav-content">
-                    <div class = "nav">
-                        <ul class = "nav__links">
-                            <li><a href="#">home</a></li>
-                            <li><a href="#portfolio">portfolio</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">contact</a></li>
-                        </ul>
-                    </div>
+                <div class = "nav">
+                    <ul class = "nav__links">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
                 </div>
+            </div>
+        </div>    
+        
     <div class="title-container main-title">
         <h1 class = "primary-heading">Hello, I'm <span class = "orange">Kiron</span>.</h1>
         <h2>I'm a full-stack web developer.</h2>
@@ -190,14 +193,24 @@
             <div class="contact-form">
                 <form id="contact-form" action="https://formspree.io/kiron_basu@hotmail.com" method="POST">
                     
-                    <label><span class = "name">Name*</span>
-                    <input type="text" name="name" class ="form-control" required></label>
+                    <div class="input-container">
+                        <label><span class = "name">Name*</span>
+                        <input type="text" name="name" class ="form-control" required>
+                        <span class="border"></span></label>
+                    </div>
                     
-                    <label><span>Email*</span>
-                    <input type="email" name="_replyto" class ="form-control" required></label>
-
-                    <label><span>Message*</span>
-                    <textarea name="message" class ="form-control" required></textarea></label>
+                    <div class="input-container">
+                        <label><span>Email*</span>
+                        <input type="email" name="_replyto" class ="form-control" required>
+                        <span class="border"></span></label>
+                    </div>
+                    
+                    <div class="input-container">
+                        <label><span>Message*</span>
+                        <textarea name="message" class ="form-control" required></textarea>
+                        <span class="textarea-border"></span></label>
+                    </div>
+                    
 
                     <div class="submit-wrapper">
                         <input type="submit" value="Send" class="form-control submit">
