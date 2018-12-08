@@ -1,7 +1,7 @@
 .section-contact {
     margin-top: 14rem;
     padding-top: 15rem;
-    padding-bottom: 20rem;
+    padding-bottom: 18rem;
     background-image: url('/img/earth-from-space.jpg');
     background-image: linear-gradient(to bottom, rgba($color-white, .6) 0%,rgba($color-white, .6) 100%), url('/img/earth-from-space.jpg');
     background-size: cover;
@@ -15,9 +15,18 @@
         & h4 {
             font-family: 'roboto', 'sans-serif';
             font-weight: 100;
+            position: relative;
         }
     }
     
+    &__icon-container {
+        display: inline-block;
+        transform: translateY(1.3rem);
+        
+    }
+    &__footer-text {
+        bottom: 6rem;
+    }
 }
 
 form {

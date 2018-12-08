@@ -14,6 +14,10 @@
     display: inline-block;
 }
 
+.inline {
+    display:inline;
+}
+
 .extended-spacing {
     margin-top: 16rem;
 }

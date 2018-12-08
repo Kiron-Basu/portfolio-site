@@ -329,38 +329,64 @@ select { /* 1 */
     font-weight: 100;
 }.inline-block {
     display: inline-block;
+}.inline {
+    display:inline;
 }.extended-spacing {
     margin-top: 16rem;
 }/* Do not edit modules/_sprite directly as it's generated automatically bu Gulp. Instead edit gulp/templates/sprite */.icon {
-            background-image: url('/img/sprites/sprite-9810982c.svg');
-        }.icon--codepen-svg {
+            background-image: url('/img/sprites/sprite-1e8825ed.svg');
+        }.icon--arrow-right {
+        width: 15px;
+        height: 15px;
+        background-position: 89.25170068027211% 58.8339222614841%;
+    }.icon--codepen-icon {
+        width: 41px;
+        height: 41px;
+        background-position: 100% 66.66296296296296%;
+    }.icon--codepen-svg {
         width: 500px;
         height: 500px;
         background-position: 0 0;
+    }.icon--codepen-svg_-_small {
+        width: 250px;
+        height: 250px;
+        background-position: 100% 0;
     }.icon--css-icon {
         width: 73px;
         height: 81px;
-        background-position: 100% 76.12887828162292%;
+        background-position: 0 100%;
+    }.icon--css-icon-small {
+        width: 73px;
+        height: 81px;
+        background-position: 10.782865583456426% 100%;
+    }.icon--github-icon {
+        width: 34.64px;
+        height: 33.8px;
+        background-position: 99.1109371505256% 73.27850877192982%;
     }.icon--html-icon {
         width: 103px;
         height: 103px;
-        background-position: 90.41591320072332% 54.40302267002519%;
+        background-position: 93.66306027820711% 75.30962343096235%;
     }.icon--javascript-icon {
         width: 106px;
         height: 106px;
-        background-position: 90.9090909090909% 27.913705583756347%;
+        background-position: 77.63975155279503% 75.78526315789473%;
+    }.icon--linkedin-icon {
+        width: 42px;
+        height: 42px;
+        background-position: 31.35593220338983% 92.7643784786642%;
     }.icon--react-icon {
         width: 156px;
         height: 109.98px;
-        background-position: 100% 0;
+        background-position: 84.17508417508418% 53.076302492463164%;
     }.icon--redux-icon {
         width: 83px;
         height: 83px;
-        background-position: 87.26003490401396% 76.49400479616307%;
+        background-position: 98.35082458770614% 50.200803212851405%;
     }.icon--sass-icon {
         width: 76px;
         height: 76px;
-        background-position: 86.20689655172414% 94.80660377358491%;
+        background-position: 21.661721068249257% 99.00990099009901%;
     }.wrapper {
     position: relative;
     z-index: 100;
@@ -393,7 +419,7 @@ select { /* 1 */
 }.nav-wrapper {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     background-color: red;
 
 }.nav-content {
@@ -408,7 +434,7 @@ select { /* 1 */
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(245,190,63, 0.1);
-    min-height: 6vh;
+    height: 6vh;
     //visibility: hidden;
 }.nav__links {
         display: flex;
@@ -649,8 +675,8 @@ select { /* 1 */
 
          
      }.icon-shift-up {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
+    -webkit-transform: translateY(-.5rem);
+            transform: translateY(-.5rem);
 }.icon-shift-down-1 {
     -webkit-transform: translateY(1rem);
             transform: translateY(1rem);
@@ -669,11 +695,10 @@ select { /* 1 */
 }.section-contact {
     margin-top: 14rem;
     padding-top: 15rem;
-    padding-bottom: 20rem;
+    padding-bottom: 18rem;
     background-image: url('/img/earth-from-space.jpg');
     background-image: linear-gradient(to bottom, rgba(255,255,255, .6) 0%,rgba(255,255,255, .6) 100%), url('/img/earth-from-space.jpg');
     background-size: cover;
-    
 }.section-contact__footer {
         position: relative;
         
@@ -682,7 +707,15 @@ select { /* 1 */
     }.section-contact__footer h4 {
             font-family: 'roboto', 'sans-serif';
             font-weight: 100;
-        }form {
+            position: relative;
+        }.section-contact__icon-container {
+        display: inline-block;
+        -webkit-transform: translateY(1.3rem);
+                transform: translateY(1.3rem);
+        
+    }.section-contact__footer-text {
+        bottom: 6rem;
+    }form {
     max-width: 30rem;
     margin: 0 auto 5rem;
     font-family: 'roboto', 'sans-serif';
@@ -784,15 +817,15 @@ select { /* 1 */
         transition: all .4s;
     }.primary-btn__arrow {
         top: 50%;  
-    left: 20%;
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-            transform: translateY(-50%) rotate(-45deg);
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    border: 3px solid #fff;
-    border-left: none;
-    border-top: none;
+        left: 20%;
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border: 3px solid #fff;
+        border-left: none;
+        border-top: none;
     }.primary-btn__arrow:before {
         content: '';
         position: absolute;

@@ -42,7 +42,7 @@
 
 
 .icon-shift-up {
-    transform: translateY(-1rem);
+    transform: translateY(-.5rem);
 }
 .icon-shift-down-1 {
     transform: translateY(1rem);
