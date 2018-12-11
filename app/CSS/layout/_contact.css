@@ -1,6 +1,6 @@
 .section-contact {
-    margin-top: 14rem;
-    padding-top: 15rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     padding-bottom: 18rem;
     background-image: url('/img/earth-from-space.jpg');
     background-image: linear-gradient(to bottom, rgba($color-white, .6) 0%,rgba($color-white, .6) 100%), url('/img/earth-from-space.jpg');
@@ -66,7 +66,11 @@ form {
     }
 
     & textarea {
-        height: 20rem;
+        height: 12rem;
+
+        @mixin mediumScreen {
+            height: 20rem;
+        }
     }
 }
 

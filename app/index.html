@@ -21,10 +21,10 @@
 
             <nav class="nav-burger__nav">
                 <ul class="nav-burger__list">
-                    <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">home</a></li>
-                    <li class="nav-burger__item"><a href="#portfolio" class="nav-burger__link nav-burger__underline">portfolio</a></li>
-                    <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">about</a></li>
-                    <li class="nav-burger__item"><a href="" class="nav-burger__link nav-burger__underline">contact</a></li>
+                    <li class="nav-burger__item"><a href="#home-section" class="nav-burger__link nav-burger__underline">home</a></li>
+                    <li class="nav-burger__item"><a href="#portfolio-section" class="nav-burger__link nav-burger__underline">portfolio</a></li>
+                    <li class="nav-burger__item"><a href="#about-section" class="nav-burger__link nav-burger__underline">about</a></li>
+                    <li class="nav-burger__item"><a href="#contact-section" class="nav-burger__link nav-burger__underline">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,26 +34,28 @@
                 <div class="nav-content">
                     <div class = "nav">
                         <ul class = "nav__links">
-                            <li><a href="#">home</a></li>
-                            <li><a href="#portfolio">portfolio</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">contact</a></li>
+                            <li><a href="#home-section" class = "smoothScroll" id = "home">home</a></li>
+                            <li><a href="#portfolio-section" class = "smoothScroll" id = "portfolio-link">portfolio</a></li>
+                            <li><a href="#about-section" class = "smoothScroll" id = "about">about</a></li>
+                            <li><a href="#contact-section" class = "smoothScroll" id = "contact">contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>    
-    <div class="wrapper">
-        
-        
-    <div class="title-container main-title">
-        <h1 class = "primary-heading">Hello, I'm <span class = "orange">Kiron</span>.</h1>
-        <h2>I'm a full-stack web developer.</h2>
-        <div class="button-center">
-        <a href='#portfolio'class="primary-btn primary-btn--animated">view my work <span class = "primary-btn__arrow-container">
-        <span class ="inline-block icon icon--arrow-right"></span>
-        </span></a>
+    <div class="wrapper" id= "home-section">
+        <div class="section title-container main-title" data-matching-link="#home">
+            <h1 class = "primary-heading">Hello, I'm <span class = "orange">Kiron</span>.</h1>
+            <h2>I'm a full-stack web developer.</h2>
+            <div class="button-center">
+            <a href='#portfolio-section'class="smoothScroll primary-btn primary-btn--animated">view my work <span class = "primary-btn__arrow-container">
+            <span class ="inline-block icon icon--arrow-right"></span>
+            </span></a>
+            </div>
         </div>
-    </div>
+    <div class="top-container">
+
+    </div>    
+    
     <div class="shooting-star-container">
         <div class="p p-1"></div>
     </div> 
@@ -62,7 +64,7 @@
    
    <main>
         <section class="section-portfolio">
-                <h3 class = "section-heading extended-spacing" id = "portfolio">Portfolio</h3>
+                <h3 class = "section section-heading extended-spacing" id = "portfolio-section" data-matching-link="#portfolio-link">Portfolio</h3>
             <div class="container">
                 <div class = "text-box-wrapper">
                         <div class = "box img-align">
@@ -153,7 +155,7 @@
                     </div>
             </div>
         </section>
-        <section class="section-about">
+        <section class="section section-about" id = "about-section" data-matching-link="#about">
             <h3 class = "section-heading">About</h3>
                 <div class="section-about__text-content">
                     <p class="about-text intro"><strong>I'm a front-end developer and web designer from Wiltshire, UK.</strong></p>
@@ -189,7 +191,7 @@
                 <p class="email-text orange">kiron_basu@hotmail.com</p>
                 </div>
         </section>
-        <section class="section-contact">
+        <section class="section section-contact" id = "contact-section" data-matching-link="#contact">
             <h3 class = "section-heading">Contact</h3>
             <div class="contact-form">
                 <form id="contact-form" action="https://formspree.io/kiron_basu@hotmail.com" method="POST">
@@ -233,5 +235,5 @@
         </section>
     </main>        
 </body>
-<script src="scripts/app.js"></script>
+<script src="/temp/scripts/app.js"></script>
 </html>

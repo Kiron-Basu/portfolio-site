@@ -1,4 +1,28 @@
-//var deg = Math.random();
+import $ from 'jquery';
+import CloseNav from './modules/CloseNav';
+import RevealOnScroll from './modules/RevealOnScroll';
+import Header from './modules/Header';
+
+
+
+var closeNav = new CloseNav();
+new RevealOnScroll($('.section-portfolio'), "85%");
+new RevealOnScroll($('.section-about'), "60%");
+new RevealOnScroll($('.section-contact'), "60%");
+var header = new Header();
+
+
+
+// var Person = require('./modules/Person.js');
+
+// alert('this is a test for our webpack automation');
+
+// var John = new Person('John Doe', 'blue');
+// john.greet();
+// var Jane = new Person('Jane Smith', 'green');
+// jane.greet();
+
+//star animation
 let angle = 0;
 let direction;
 const star = document.querySelector('.p');
@@ -17,4 +41,4 @@ function setProperty(position, translate) {
   
   }
   setInterval(changeAngle, 8000);
-  
+ 
