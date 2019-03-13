@@ -42,7 +42,12 @@
    opacity: 1;
   }
    
-  
+  @mixin extraLargeScreen {
+    &:hover {
+      outline: 1rem solid orange;
+      transform: scale(1.02) translateY(-1.5rem);
+    }
+   }
   }
   
 
@@ -53,9 +58,3 @@
       justify-content: space-between;
     }
   }
-  @mixin extraLargeScreen {
-    main section div.box:hover {
-      outline: 1rem solid orange;
-      transform: scale(1.02) translateY(-1.5rem);
-    }
-   }
