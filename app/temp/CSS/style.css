@@ -335,7 +335,7 @@ select { /* 1 */
 }.extended-spacing {
     margin-top: 16rem;
 }/* Do not edit modules/_sprite directly as it's generated automatically bu Gulp. Instead edit gulp/templates/sprite */.icon {
-            background-image: url('./app/img/sprites/sprite-1e8825ed.svg');
+            background-image: url('../../../app/img/sprites/sprite-1e8825ed.svg');
         }.icon--arrow-right {
         width: 15px;
         height: 15px;
